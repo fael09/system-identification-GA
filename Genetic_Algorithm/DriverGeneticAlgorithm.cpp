@@ -54,7 +54,7 @@ void DriverGeneticAlgorithm::run() {
 		Population = updatePopulation(Population);
 
 		cout << endl << endl;
-		cout << "Generation " << generationCount+1 << " complete." << "  || " <<"Generation " << generationCount+1 << " complete." << "  || " <<"Generation " << generationCount+1 << " complete." << endl;
+		//cout << "Generation " << generationCount+1 << " complete." << "  || " <<"Generation " << generationCount+1 << " complete." << "  || " <<"Generation " << generationCount+1 << " complete." << endl;
 
 		++generationCount;
 		cout << "geração: " << generationCount << endl;
@@ -295,7 +295,7 @@ Individual DriverGeneticAlgorithm::pool(const std::vector<Individual> &populatio
 
 void DriverGeneticAlgorithm::status(int generation, int indivualNumber){
 	cout << endl 
-	<< "Generation: " << generation+1 << " of " << MAX_ALLOWABLE_GENERATIONS << endl
-	<< "Individual: " << indivualNumber+1 << " of " << POPULATION_SIZE << endl;
+//	<< "Generation: " << generation+1 << " of " << MAX_ALLOWABLE_GENERATIONS << endl
+//	<< "Individual: " << indivualNumber+1 << " of " << POPULATION_SIZE << endl;
 	// << "Race: " << raceNumber+1 << " of " << this->track.size() << endl;
 }
