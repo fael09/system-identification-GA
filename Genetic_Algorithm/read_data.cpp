@@ -17,7 +17,7 @@ float** read_data(){
 		int j = 0;
 
         /* abre novamente para a leitura  */
-        p = fopen("dados_cpp.csv","r");
+        p = fopen("../Genetic_Algorithm/dados_cpp.csv","r");
 		
         while (1){
 			while(c != '\n'){

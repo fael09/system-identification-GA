@@ -9,7 +9,7 @@
 //GA parameters
 #define CROSSOVER_RATE 0.95	// Rate defined by Núnez-Letamendia
 #define MUTATION_RATE 0.01 	// Rate defined by Núnez-Letamendia
-#define POPULATION_SIZE 30	// Must be an EVEN number
+#define POPULATION_SIZE 30 //30	// Must be an EVEN number
 #define GENE_LENGTH 32
 #define MAX_ALLOWABLE_GENERATIONS 616 //Calculated using A LANDER , J. 1992. On optimal population size of genetic algorithms.
 #define NUMBER_OF_PARAMETERS 2	// Number of parameters to be evolved
@@ -77,7 +77,7 @@ public:
 	/** method set for fitness
 	*/
 	inline void setFitness(float fitness) {
-		this->fitness += fitness;
+		this->fitness = fitness;
 	}
 	/** method get for fitness
 	*/

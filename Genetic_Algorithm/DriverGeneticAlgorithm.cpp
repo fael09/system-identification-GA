@@ -57,14 +57,21 @@ void DriverGeneticAlgorithm::run() {
 		cout << "Generation " << generationCount+1 << " complete." << "  || " <<"Generation " << generationCount+1 << " complete." << "  || " <<"Generation " << generationCount+1 << " complete." << endl;
 
 		++generationCount;
-
+		cout << "geração: " << generationCount << endl;
 		// If the maximum number of generations is reached, ends program
 		if (generationCount >= MAX_ALLOWABLE_GENERATIONS) {
 			cout << "Maximum allowable generations reached! Chromosome evolved." << endl;
 			evolved = true;
 		}
 	}
+    cout << binToHex(bestIndividual.getBits()) << "\t" << bestIndividual.getFitness() << endl;
+	string aux1 = bestIndividual.getBits().substr((0*32),((0+1)*32));
+    string aux2 = bestIndividual.getBits().substr((1*32),((1+1)*32));
 
+	float	km = bestIndividual.binToFloat(aux1);
+    float	tau = bestIndividual.binToFloat(aux2);
+	cout << "Km = " << km << endl;
+	cout << "tau = " << tau << endl;
 }
 
 void DriverGeneticAlgorithm::evaluatePopulation(vector<Individual> &Population) {
