@@ -294,7 +294,7 @@ Individual DriverGeneticAlgorithm::pool(const std::vector<Individual> &populatio
 }
 
 void DriverGeneticAlgorithm::status(int generation, int indivualNumber){
-	cout << endl 
+//	cout << endl 
 //	<< "Generation: " << generation+1 << " of " << MAX_ALLOWABLE_GENERATIONS << endl
 //	<< "Individual: " << indivualNumber+1 << " of " << POPULATION_SIZE << endl;
 	// << "Race: " << raceNumber+1 << " of " << this->track.size() << endl;
