@@ -40,14 +40,20 @@ void GaAdapter::callTest(Chromosome* chromosome) {
 
    for (size_t i = 0; i <= 36000; i++){
         t[i] = data[i][0];  
-        udet[i] = data[i][3];
+        udet[i] = data[i][4];
         gt[i] = data[i][1];    
         
         if(udet[i] != udet[i+1]){
             j = 0;
         }
+
+         if(data[i][4]>0){
+            data[i][4] = data[i][4]- 0.7567;
+         }else data[i][4] = data[i][4] + 0.7443;
+    
+
         out_model[i] = (1 - exp(t[j]/tau))*km*udet[i];
-        erro = erro + abs(gt[i]-out_model[i]);
+        erro = erro + fabs(gt[i]-out_model[i]);
         j++;
     }
 
