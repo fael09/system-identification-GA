@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <math.h>   
 #include "read_data.h"
+
 using namespace std;
 //--------------------------------------------------------------------------
 //Auxiliary methods

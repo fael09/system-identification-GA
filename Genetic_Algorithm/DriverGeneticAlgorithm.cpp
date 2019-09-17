@@ -10,6 +10,7 @@
 
 #include "DriverGeneticAlgorithm.h"
 #include <stdio.h>
+#include <ctime>
 using	namespace std;
 
 // Chromosome generation process (Main Method)
@@ -33,7 +34,7 @@ void DriverGeneticAlgorithm::run() {
 	fp=fopen(filename,"w+");
 	// Random number generator's seeder
 	srand ((int)time(NULL));
-
+	int x = 0;
 	//flag
 	bool	evolved			= false;
 
@@ -61,6 +62,11 @@ void DriverGeneticAlgorithm::run() {
 
 		++generationCount;
 		cout << "geração: " << generationCount << endl;
+		if(x>200){ 
+			sleep(60);
+			x = 0;
+		}
+		x++;
 		// If the maximum number of generations is reached, ends program
 		if (generationCount >= MAX_ALLOWABLE_GENERATIONS) {
 			cout << "Maximum allowable generations reached! Chromosome evolved." << endl;
