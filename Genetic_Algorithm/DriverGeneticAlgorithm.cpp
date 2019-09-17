@@ -117,7 +117,6 @@ void DriverGeneticAlgorithm::onePointCrossover (Individual &offspring1, Individu
 	if (RANDOM_NUMBER < CROSSOVER_RATE) {
 	    // Randomic choice of the crossover point
 	    int crossover 	= (int) (RANDOM_NUMBER * CHROMOSOME_LENGTH);
-
 	    string new1		= (offspring1.getBits()).substr (0, crossover) + (offspring2.getBits()).substr (crossover, CHROMOSOME_LENGTH);
 	    string new2		= (offspring2.getBits()).substr (0, crossover) + (offspring1.getBits()).substr (crossover, CHROMOSOME_LENGTH);
 
