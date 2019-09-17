@@ -2,7 +2,7 @@
 #define GAADAPTER_H
 
 
-#define MAX_SIMULTANEOUS_TESTS 4	//Caution. 4 tests running simultaneously demmands a lot of computational resource
+#define MAX_SIMULTANEOUS_TESTS 10	//Caution. 4 tests running simultaneously demmands a lot of computational resource
 
 #include "Chromosome.h"
 #include <iostream>

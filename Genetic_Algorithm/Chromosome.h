@@ -11,7 +11,7 @@
 #define MUTATION_RATE 0.01 	// Rate defined by Núnez-Letamendia
 #define POPULATION_SIZE 30 //30	// Must be an EVEN number
 #define GENE_LENGTH 32
-#define MAX_ALLOWABLE_GENERATIONS 616 //Calculated using A LANDER , J. 1992. On optimal population size of genetic algorithms.
+#define MAX_ALLOWABLE_GENERATIONS 616*2 //Calculated using A LANDER , J. 1992. On optimal population size of genetic algorithms.
 #define NUMBER_OF_PARAMETERS 2	// Number of parameters to be evolved
 #define CHROMOSOME_LENGTH GENE_LENGTH * NUMBER_OF_PARAMETERS
 #define CHROMOSOME_TO_PRESERVE 4			// Must be an EVEN number
