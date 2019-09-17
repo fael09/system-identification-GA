@@ -25,7 +25,7 @@ void GaAdapter::callTest(Chromosome* chromosome) {
     float erro = 0;
     float km = 0;
     float tau = 0;
-    int j = 0, simple_size=1;
+    int j = 0;
     float fitness = 0;
     
             
@@ -38,7 +38,7 @@ void GaAdapter::callTest(Chromosome* chromosome) {
     // del_plus//
     // del_menus//
 
-   for (size_t i = 0; i <= 36000; i++){
+   for (size_t i = 0; i < 35999; i++){
         t[i] = data[i][0];  
         udet[i] = data[i][4];
         gt[i] = data[i][1];    
@@ -57,9 +57,9 @@ void GaAdapter::callTest(Chromosome* chromosome) {
         j++;
     }
 
-    simple_size = sizeof(gt)/4;
+    //simple_size = sizeof(gt)/4;
 
-    fitness = 1 - erro/simple_size;
+    fitness = 1 - erro/5000000;
  chromosome->setFitness(fitness);	
 
 }

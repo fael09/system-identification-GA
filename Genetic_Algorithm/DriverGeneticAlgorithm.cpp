@@ -9,7 +9,7 @@
 
 
 #include "DriverGeneticAlgorithm.h"
-
+#include <stdio.h>
 using	namespace std;
 
 // Chromosome generation process (Main Method)
@@ -28,6 +28,9 @@ int main (int argc, char* argv[]) {
 //------------------------------------------------------------------------
 // GA Methods (Implementations)
 void DriverGeneticAlgorithm::run() {
+	FILE *fp;
+    	char filename[20]= "tau_km.txt";
+	fp=fopen(filename,"w+");
 	// Random number generator's seeder
 	srand ((int)time(NULL));
 
@@ -72,6 +75,7 @@ void DriverGeneticAlgorithm::run() {
     float	tau = bestIndividual.binToFloat(aux2);
 	cout << "Km = " << km << endl;
 	cout << "tau = " << tau << endl;
+	fprintf(fp,"%f , %f",tau, km);
 }
 
 void DriverGeneticAlgorithm::evaluatePopulation(vector<Individual> &Population) {
