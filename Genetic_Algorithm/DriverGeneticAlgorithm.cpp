@@ -34,7 +34,6 @@ void DriverGeneticAlgorithm::run() {
 	fp=fopen(filename,"w+");
 	// Random number generator's seeder
 	srand ((int)time(NULL));
-	int x = 0;
 	//flag
 	bool	evolved			= false;
 
@@ -43,6 +42,8 @@ void DriverGeneticAlgorithm::run() {
 	for (int i = 0; i < POPULATION_SIZE; i++) Population.push_back(Individual());
 
 	// Genetic Algorithm actual loop
+	int x = 0;
+
 	while (!evolved) {
 
 		evaluatePopulation(Population);
@@ -62,7 +63,8 @@ void DriverGeneticAlgorithm::run() {
 
 		++generationCount;
 		cout << "geração: " << generationCount << endl;
-		if(x>200){ 
+		if(x > 200){ 
+			cout << "resfriando ..."<<endl;
 			sleep(60);
 			x = 0;
 		}
