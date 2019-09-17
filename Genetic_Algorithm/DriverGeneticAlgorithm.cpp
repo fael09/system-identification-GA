@@ -29,7 +29,7 @@ int main (int argc, char* argv[]) {
 // GA Methods (Implementations)
 void DriverGeneticAlgorithm::run() {
 	FILE *fp;
-    	char filename[20]= "tau_km.txt";
+    char filename[40]= "../Genetic_Algorithm/tau_km.txt";
 	fp=fopen(filename,"w+");
 	// Random number generator's seeder
 	srand ((int)time(NULL));
@@ -73,9 +73,11 @@ void DriverGeneticAlgorithm::run() {
 
 	float	km = bestIndividual.binToFloat(aux1);
     float	tau = bestIndividual.binToFloat(aux2);
-	cout << "Km = " << km << endl;
+	
 	cout << "tau = " << tau << endl;
-	fprintf(fp,"%f , %f",tau, km);
+	cout << "Km = " << km << endl;
+	fprintf(fp,"%.10f , %.10f",tau, km);
+	fclose(fp);
 }
 
 void DriverGeneticAlgorithm::evaluatePopulation(vector<Individual> &Population) {
